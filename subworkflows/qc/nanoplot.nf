@@ -18,8 +18,8 @@ process MOP_nanoPlot {
     tuple val(id), path(bamfile)
 
     output:
-    tuple val(id), path("*_plot/*"), emit: plots optional true
-    tuple val(id), path("${id}_stats_mqc.png"), emit: pngs optional true 
+    tuple val(id), path("*_plot/*"), emit: plots, optional: true
+    tuple val(id), path("${id}_stats_mqc.png"), emit: pngs, optional: true 
     
     script:
     """

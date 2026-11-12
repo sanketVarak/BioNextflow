@@ -27,7 +27,7 @@ process HtseqCount {
 
     output:
     tuple val(id), path("${id}.counts"), emit: counts
-    tuple val(id), path("${id}_anno.bam"), emit: bam optional true
+    tuple val(id), path("${id}_anno.bam"), emit: bam, optional: true
   
 	script:    
 	def anno = unzipNamedPipe(annotation_file)
